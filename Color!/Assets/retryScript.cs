@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
 
 public class retryScript : MonoBehaviour {
 
-	public Text score;
-	public Text highScoreDisplay;
+	public TextMeshProUGUI score;
+	public TextMeshProUGUI highScoreDisplay;
 
 	// Use this for initialization
 	void Start () {
@@ -24,5 +23,10 @@ public class retryScript : MonoBehaviour {
 		score.text = currentScore.ToString();
 		highScoreDisplay.text = highScore.ToString();
 
+	}
+
+	public void retryToPlay()
+	{
+		SceneManager.LoadScene("Main");
 	}
 }
